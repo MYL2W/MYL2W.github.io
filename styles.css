@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto; /* Добавляем прокрутку по вертикали */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Устанавливаем высоту контейнера кнопок */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 5px;
+    background-color: transparent; /* Сделаем кнопку прозрачной */
+    color: white; /* Цвет текста */
+    text-decoration: none;
+    border: 2px solid gray; /* Добавим серую обводку */
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 26%; /* Ширина кнопок в процентах */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Добавим плавные переходы */
+}
+
+.btn:hover {
+    background-color: #ddd; /* Изменение фона при наведении */
+    color: black; /* Изменение цвета текста при наведении */
+    border: 2px solid #ddd;
+    transform: scale(1.1);
+}
+
+.btn.right {
+    margin-left: auto;
+}
+
+
+.message {
+    position: fixed; /* Положение фиксированное */
+    top: 25%; /* Располагаем сверху на половине высоты */
+    left: 50%; /* Располагаем по центру по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем на половину своих размеров */
+    font-size: 50px;
+    color: white; /* Изначально белый цвет */
+    opacity: 1; /* Изначальная непрозрачность */
+    transition: text-shadow 0.3s, transform 0.3s;
+    text-shadow: 0 0 20px white; /* Создание свечения */
+    z-index: 2; /* Поместить надпись поверх кнопок */
+}
+
+.message:hover {
+    text-shadow: 0 0 30px white; /* Увеличиваем свечение при наведении */
+    transform: translate(-50%, -50%) scale(1.2);
+
+}
+.text {
+    font-size: 60px; /* Размер текста */
+    color: white; /* Цвет текста */
+}
+
+.about-container {
+    position: fixed;
+    top: calc(30% + 50px); /* Устанавливаем контейнер относительно верхней границы */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 60%; /* Максимальная ширина контейнера */
+    margin: auto; /* Центрирование контейнера */
+    padding: 20px; /* Отступы внутри контейнера */
+    border: 2px solid white; /* Белая обводка */
+    border-radius: 10px; /* Скругление углов */
+    overflow: hidden; /* Решение проблемы с фиксированием высоты */
+    box-shadow: 0 0 20px 1px white; /* Внешнее свечение */
+}
+
+
+.about {
+    text-align: center; /* Центрирование текста */
+}
+
+.text2 {
+    font-size: 140%; /* Размер текста */
+    color: white; /* Цвет текста */
+}
+
+.description {
+    margin-top:20px;
+    font-size: 120%; /* Размер описания */
+    color: white; /* Цвет описания */
+    display: block; /* Принудительное перенос элемента на новую строку */
+    word-wrap: break-word; /* Разбиение длинных слов */
+    white-space: pre-wrap; /* Сохранение переносов строк */
+    text-align: justify; /* Выравнивание текста по ширине */
+}
+
+
+.social-btns-container {
+    max-margin-right: 30px;
+    display: none;
+}
+
+.social-btn {
+    display: inline-block;
+    margin-right: 30px; /* добавляем отступ слева для равномерного распределения */
+    margin-left: 15px; /* добавляем отступ слева для равномерного распределения */
+    width: 15px; /* задаем ширину кнопок */
+    height: 10px; /* задаем высоту кнопок */
+}
+
+.social-btn img {
+    width: auto; /* чтобы изображения заполняли контейнер */
+    height: 33px; /* чтобы изображения заполняли контейнер */
+}
+
